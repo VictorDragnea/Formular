@@ -36,7 +36,7 @@ $html= <<<HTML
         <title>Multumim!</title>
     </head>
     <body>
-    	<div style="background-color:green; text-align:center; border-radius: 25px; width: 500px; display:block; margin-left: auto; margin-right: auto;">
+    	<div>
         	<h3>Multumim pentru mesaj, $nume!</h3>
         </div>		
     </body>
