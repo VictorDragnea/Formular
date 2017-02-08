@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multumim!</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+	<body>
+		<div>
+
 <?php 
 
 require 'PHPMailer-master\PHPMailerAutoload.php';
@@ -56,12 +65,14 @@ $mail->Body    = $mesaj;
 $mail->AltBody = $mesaj;
 
 if(!$mail->send()) {
-    echo 'Mesajul NU a fost trimis.';
+    echo 'Mesajul NU a fost trimis.'.'</br>';
     echo 'Eroare PHPMailer: ' . $mail->ErrorInfo;
 } else {
     echo $html;
 }
 
-
- 
 ?>
+
+		</div>
+	</body>
+</html>
