@@ -1,11 +1,24 @@
 /* CSSeu  */
 
-div {
-	background-color:green; 
-	text-align:center; 
-	border-radius: 25px; 
-	width: 500px; 
-	display:block; 
-	margin-left: auto; 
-	margin-right: auto;
+body {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.box {
+    width: 300px;
+    padding: 5px;
+    margin: 7px auto;   
+    text-align: center;
+    background-color:green;
+    border-radius: 25px;
+    font-size: 1.5em;
+    padding: 15px;
 }

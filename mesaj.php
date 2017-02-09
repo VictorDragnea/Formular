@@ -5,7 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 	<body>
-		<div>
+		<div id="container">
+			<div class="box">
 
 <?php 
 
@@ -38,20 +39,6 @@ $mail->addAddress('vdragneavictor@gmail.com', 'Joe User');     // Add a recipien
 //$mail->addBCC('bcc@example.com');
 
 
-$html= <<<HTML
-	<!DOCTYPE html>
-    <html>
-    <head>
-        <title>Multumim!</title>
-    </head>
-    <body>
-    	<div>
-        	<h3>Multumim pentru mesaj, $nume!</h3>
-        </div>		
-    </body>
-    </html>
-HTML;
-
 $uploaddir='uploads/';
 $uploadfile = $uploaddir . basename($_FILES['upload']['name']);
 move_uploaded_file($_FILES['upload']['tmp_name'],$uploadfile);
@@ -68,11 +55,11 @@ if(!$mail->send()) {
     echo 'Mesajul NU a fost trimis.'.'</br>';
     echo 'Eroare PHPMailer: ' . $mail->ErrorInfo;
 } else {
-    echo $html;
+    echo 'Multumim pentru mesaj, '.$nume.'!';
 }
 
 ?>
-
+			</div>
 		</div>
 	</body>
 </html>
