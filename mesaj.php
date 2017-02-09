@@ -10,15 +10,41 @@
 
 <?php 
 
-require 'PHPMailer-master\PHPMailerAutoload.php';
+function validare ($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    return $data;
+}
+
+//https://www.formget.com/php-contact-form/
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $nume = ucfirst(validare($_POST["nume"]));
+    $email = validare($_POST["email"]);   
+}
+
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["nume"])) {
+    $nameErr = "Name is required";
+  } else {
+    $nume = validare($_POST["nume"]);
+  }
+
+  echo $nume."</br>";
+    echo $email;
 
 //print_r($_POST);
 
-$nume = ucfirst($_POST['nume']);
-$email = $_POST['email'];
-$mesaj = $_POST['mesaj'];
+//$nume = ucfirst($_POST['nume']);
+//$email = $_POST['email'];
+//$mesaj = $_POST['mesaj'];
 
 
+
+//echo $_SERVER['PHP_SELF'];
+/*
+require 'PHPMailer-master\PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -57,7 +83,7 @@ if(!$mail->send()) {
 } else {
     echo 'Multumim pentru mesaj, '.$nume.'!';
 }
-
+*/
 ?>
 			</div>
 		</div>
