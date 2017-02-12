@@ -2,23 +2,27 @@
 <html>
 	<head>
 		<title>Formular de contact</title>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 		<form method="post" action="mesaj.php" enctype="multipart/form-data">
 		<p>Nume:
-		<input type="text" name="nume" required>
+		<input type="text" name="nume">*
 		</p>
 		<p>Email:
-		<input type="email" name="email" required>
+		<input type="email" name="email">*
 		</p>
 		<p>Mesaj:
-			<textarea name="mesaj" rows="5" cols="40"></textarea>
+			<textarea name="mesaj" rows="5" cols="40"></textarea>*
 		</p>
 		<p>Upload:
 		<input type="file" name="upload">
 		</p>
 		</br>
 		<input type="submit" value="Trimite">
+		</br>
+		</br>
+		<div class="g-recaptcha" data-sitekey="6Lf6VhUUAAAAAB-tFak3H8cjNAeTcEaDmS5MNSl-"></div>
 		</form>
 	</body>
 </html>
