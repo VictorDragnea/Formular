@@ -1,4 +1,7 @@
 <?php
+
+$bla = "gggsssfgg";
+
 /**
  * PHPMailer SPL autoloader.
  * PHP Version 5

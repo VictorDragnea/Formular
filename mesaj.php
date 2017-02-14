@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Multumim!</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="ceseseu.css">
 	</head>
 	<body>
 		<div id="container">
@@ -70,18 +70,14 @@ if(empty($nameErr) && empty($emailErr) && empty($msgErr) && empty($uploadErr)){
 	$mail->isSMTP();                                      // Set mailer to use SMTP
 	$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'dragneavictor@gmail.com';                 // SMTP username
-	$mail->Password = 'vsgvi240';                           // SMTP password
+	$mail->Username = 'php.cont.test@gmail.com';                 // SMTP username
+	$mail->Password = '$$$123$$$';                           // SMTP password
 	//$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-	$mail->Port = 587;                                    // TCP port to connect to
-	
+	$mail->Port = 587 ;                                    // TCP port to connect to
 	$mail->setFrom($email, 'Mailer');
-	$mail->addAddress('dragneavictor@gmail.com', 'Joe User');     // Add a recipient
-	
+	$mail->addAddress('dragneavictor@gmail.com', 'Joe User');     // Add a recipient	
 	$mail->addAttachment($uploadfile);         // Add attachments
-	$mail->addAttachment('uploads/', 'new.jpg');    // Optional name
 	$mail->isHTML(true);                                  // Set email format to HTML
-	
 	$mail->Subject = 'Mesaj de la '.$nume;
 	$mail->Body    = $mesaj;
 	$mail->AltBody = $mesaj;
